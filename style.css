@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 1.0rem;
+    padding: 1.0rem;
+    background-color: rgba(255, 255, 255, 0.729);
+    color: black;
+
+
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.dark {
+    position : absolute;
+    width : 50px;
+    height : 25px;
+    right : 20px;
+    top : 20px;
+    border : 2px solid;
+    border-radius: 20px;
+
+}
+   
+.dark::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 2.5px;
+    top: 1px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.dark.active::before {
+    left: 24px;
+    background: #fff;
+}
+
+body.night {
+    background-color: #2f3131;
+    color: #fff;
+}
